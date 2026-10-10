@@ -1,0 +1,38 @@
+.calculator {
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+#display {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    font-size: 28px;
+    text-align: right;
+    margin-bottom: 8px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.buttons button {
+    padding: 16px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-oper {
+    background-color: grey;
+}
+
+.buttons .btn-oper:hover {
+    background-color: #bbb;
+}
+
+.buttons button:hover {
+    background-color: #fff;
+}
