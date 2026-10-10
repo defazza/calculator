@@ -18,6 +18,9 @@ for (const btn of digitButtons) {
 const plusBtn = document.querySelector('#btn-plus');
 
 plusBtn.addEventListener('click', function() {
+    if (display.value === '' || display.value === 'Ошибка') {
+        return;
+    }
     firstNumber = display.value;
     operation = '+';
     display.value = '';
@@ -27,6 +30,9 @@ plusBtn.addEventListener('click', function() {
 const minusBtn = document.querySelector('#btn-minus');
 
 minusBtn.addEventListener('click', function() {
+        if (display.value === '' || display.value === 'Ошибка') {
+        return;
+    }
     firstNumber = display.value;
     operation = '-';
     display.value = '';
@@ -57,12 +63,16 @@ equalsBtn.addEventListener('click', function() {
             display.value = a / b;
         }
     }
-
+    firstNumber = '';
+    operation = '';
     resultShown = true;
 });
 
 const multiplyBtn = document.querySelector('#btn-multiply');
 multiplyBtn.addEventListener('click', function() {
+        if (display.value === '' || display.value === 'Ошибка') {
+        return;
+    }
     firstNumber = display.value;
     operation = '*';
     display.value = '';
@@ -70,6 +80,9 @@ multiplyBtn.addEventListener('click', function() {
 
 const divisionBtn = document.querySelector('#btn-division');
 divisionBtn.addEventListener('click', function() {
+        if (display.value === '' || display.value === 'Ошибка') {
+        return;
+    }
     firstNumber = display.value;
     operation = '/';
     display.value = '';
